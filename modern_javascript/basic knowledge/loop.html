@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While and For</title>
+</head>
+<body>
+<script>
+    // let i = 3;
+    // while (i) {
+    //     alert(i)
+    //     i--
+    // }
+
+    // let i = 0
+    // do {
+    //     alert(i)
+    //     i++
+    // } while (i < 3)
+
+    // for (let i = 0; i < 3; i++) {
+    //     alert(i)
+    // }
+
+    // let sum = 0
+    // while (true) {
+    //     let value = +prompt("Enter a number", "")
+    //     if (!value) break;
+    //     sum += value;
+    // }
+    // alert('Sum: ' + sum)
+
+    // for (let i = 0; i < 10; i++) {
+    //     if (i % 2 == 0) continue;
+    //     alert(i)
+    // }
+    // for (let i = 0; i < 10; i++) {
+    //     if (i % 2) {
+    //         alert(i)
+    //     }
+    // }
+
+    // outer: for (let i = 0; i < 3; i++) {
+    //     for (let j = 0; j < 3; j++) {
+    //         let input = prompt(`Value at coords (${i},${j})`, "")
+    //         // 如果是空字符串或取消，则中断并跳出这两个循环
+    //         if (!input) break outer
+    //     }
+    // }
+    // alert("Done")
+
+    // for (let i = 2; i < 11; i += 2) {
+    //     alert(i)
+    // }
+
+    // let i = 0
+    // while (1) {
+    //     if (i >= 3) {
+    //         break
+    //     }
+    //     alert(`number ${i}!`)
+    //     i++
+    // }
+
+    // while (true) {
+    //     let input = prompt("Please input a number which is greater than 100")
+    //     if (input > 100 || input == null) {
+    //         break
+    //     }
+    // }
+
+    let n = 1000;
+    let output = []
+    outer:
+        for (let i = 2; i < n + 1; i++) {
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) continue outer;
+            }
+            output.push(i)
+        }
+    alert("2 to " + n + "素数 : " + output)
+</script>
+</body>
+</html>
