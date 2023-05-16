@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./lodash.js"></script>
+</head>
+<body>
+<script>
+	"use strict";
+	// let user = {name: 'John'};
+	// let admin = user;
+	// admin.name = 'Pete'; // 通过 "admin" 引用来修改
+	// alert(user.name); // 'Pete'，修改能通过 "user" 引用看到
+
+	// let user = {
+	// 	name: "John",
+	// 	age: 30
+	// };
+	// let clone = {}; // 新的空对象
+	// // 将 user 中所有的属性拷贝到其中
+	// for (let key in user) {
+	// 	clone[key] = user[key];
+	// }
+	// // 现在 clone 是带有相同内容的完全独立的对象
+	// clone.name = "Pete"; // 改变了其中的数据
+	// alert(user.name); // 原来的对象中的 name 属性依然是 John
+	// alert(clone.name)
+
+	// let user = { name: "John" };
+	// let permissions1 = { canView: true };
+	// let permissions2 = { canEdit: true };
+	// // 将 permissions1 和 permissions2 中的所有属性都拷贝到 user 中
+	// Object.assign(user, permissions1, permissions2);
+	// let user = {
+	// 	name: "John",
+	// 	age: 30
+	// };
+	// let clone = Object.assign({}, user);
+
+	let user = {
+		name: "John",
+		sizes: {
+			height: 182,
+			width: 50
+		}
+	};
+	let user2 = _.cloneDeep(user)
+  console.log(user2)
+</script>
+</body>
+</html>
